@@ -5,6 +5,8 @@
 
 class EnumCharactarData {
 
+    public:
+
     enum Value : quint8 {
 
         AgressiveKindness,
@@ -44,8 +46,29 @@ class EnumCharactarData {
 
     };
 
+    EnumCharactarData() = default;
 
 
+    EnumCharactarData(const EnumCharactarData &copy) : value(copy.value) {
+        //No-OP
+    }
+
+    constexpr EnumCharactarData(Value type) : value(type) {
+        //No-OP
+    }
+
+    constexpr EnumCharactarData(quint8 type) : value((Value)type) {
+        //No-OP
+    }
+
+    constexpr operator Value() const {
+        return value;
+    }
+
+
+    private:
+
+    Value value;
 
 };
 
