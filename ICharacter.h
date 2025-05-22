@@ -12,6 +12,12 @@
  */
 class ICharacter {
 
+
+
+
+
+
+
 };
 
 #endif // ICHARACTER_H

@@ -17,7 +17,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ControllerSpellCaster.cpp \
+    Spell.cpp \
     SpellCost.cpp \
+    SpellManager.cpp \
     main.cpp \
     MainWindow.cpp
 
@@ -27,7 +29,9 @@ HEADERS += \
     ICharacter.h \
     ISpell.h \
     MainWindow.h \
-    SpellCost.h
+    Spell.h \
+    SpellCost.h \
+    SpellManager.h
 
 FORMS += \
     MainWindow.ui

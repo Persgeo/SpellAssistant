@@ -27,6 +27,8 @@ class ControllerSpellCaster : public QObject {
         void setSpellInfo();
 
 
+
+
 };
 
 #endif // CONTROLLERSPELLCASTER_H
