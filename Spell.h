@@ -11,6 +11,14 @@ class Spell : public ISpell {
         Spell();
 
         virtual QString getSpellName() override;
+
+        ~Spell(){};
+    
+    private:
+        
+        
 };
+
+
 
 #endif // SPELL_H
