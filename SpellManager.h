@@ -12,6 +12,8 @@ public:
 
 
     void addSpell();
+
+    ~SpellManager(){};
 };
 
 #endif // SPELLMANAGER_H

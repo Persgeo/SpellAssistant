@@ -9,11 +9,8 @@
  */
 class SpellCost {
 
-
-    public:
-        SpellCost();
-
-
+public:
+    SpellCost();
 
 };
 

@@ -11,14 +11,14 @@ public:
     
     Q_OBJECT
 
-    enum TypeSpell : quint
+    enum TypeSpell : quint8
     {
-        Passiv,
         Spell, // Активная способность с ощутимым эффектом, можно назвать Incantation, чтобы не перемешивалось слово spell
-        Ability // Способность
-    }
+        Ability, // Способность
+        Passiv
+    };
 
-    virtual QString getSpellName(QString type) = 0 ;
+    virtual QString getSpellName(QString type) = 0 ;  // предлагаю эти функции делать не виртуальными, потому что функция везде одинаковая будет
     virtual QString setSpellName(QString type) = 0 ;
 
     virtual quint8 getSpellLevel() = 0 ;
@@ -41,9 +41,15 @@ public:
 
     virtual quint8 getSpellAttributes() = 0;
 
-private:
+protected:
     TypeSpell typeSpell;
     QString spellType;
+    QString spellName;
+    QString spellDescription;
+    quint8 spellLvl;
+    quint8 rangeCast;  // Дистанция в метрах или строкой?
+    quint8 durationSpell;
+
 };
 
 #endif // ISPELL_H
