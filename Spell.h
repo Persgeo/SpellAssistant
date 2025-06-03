@@ -11,13 +11,14 @@ public:
 
     Spell();
 
-    virtual QString getSpellName() override final {return m_name;};  // У меня тут warning "Нет переопределения"
+    virtual QString getSpellName() override final {return m_name;};
+    virtual QString setSpellName(QString type) override final {m_name = type;};
 
     ~Spell(){};
     
 private:
     QString m_name;
-        
+
 };
 
 

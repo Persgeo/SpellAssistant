@@ -18,14 +18,14 @@ public:
         Passiv
     };
 
-    virtual QString getSpellName(QString type) = 0 ;  // предлагаю эти функции делать не виртуальными, потому что функция везде одинаковая будет
+    virtual QString getSpellName() = 0 ;
     virtual QString setSpellName(QString type) = 0 ;
 
     virtual quint8 getSpellLevel() = 0 ;
     virtual quint8 setSpellLevel() = 0 ;
 
-    virtual QString getSpellDescription() = 0; // а может char бахнуть?
-    virtual QString setSpellDescription() = 0;
+    virtual QString getSpellDescription() = 0;
+    virtual QString setSpellDescription(QString description) = 0;
 
     virtual quint8 getSpellRangeCast() = 0;
     virtual quint8 setSpellRangeCast() = 0;
